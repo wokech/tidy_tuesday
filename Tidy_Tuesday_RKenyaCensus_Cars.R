@@ -10,7 +10,7 @@ library(rKenyaCensus)
 library(tidyverse)
 library(ggthemes)
 
-# Review ttheme_economist()# Review the data catalogue
+# Review the data catalogue
 data("DataCatalogue")
 
 # Load Table 2.36 - Percentage Distribution of Conventional 
@@ -18,18 +18,16 @@ data("DataCatalogue")
 # of Residence, County and Sub County
 
 # Household Car Ownership in Kenya
-# 
-
 df <- V4_T2.36
 View(df)
 
 # Load county-specific data from Table 2.36
-
 cty_df <- df %>% filter(AdminArea == "County")
 view(cty_df)
 
 # Set an appropriate theme
 theme_set(theme_solarized())
+
 # Generate a plot to demonstrate household car ownership in Kenya
 ggplot(cty_df, aes(x = reorder(County, -Car), y = Car)) + 
   geom_point(size=3, color = "purple") +  
@@ -62,6 +60,5 @@ ggplot(cty_df, aes(x = reorder(County, -Car), y = Car)) +
   coord_flip()
 
 # Save the plot
-ggsave("C:/Users/willy/OneDrive/Documents/R Files/
-       Census Data Samples/plot3.png", width = 7.5, height = 10)
+ggsave("plot3.png", width = 7.5, height = 10)
 
