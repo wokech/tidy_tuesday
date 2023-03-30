@@ -1,6 +1,6 @@
 # TidyTuesday
 
-A collection of TidyTuesday visualizations for 2021
+A collection of TidyTuesday visualizations
 
 ## 19/01/2021 rKenyaCensus ([code](https://github.com/wokech/TidyTuesday/blob/main/Tidy_Tuesday_RKenyaCensus_Cars.R))
 
