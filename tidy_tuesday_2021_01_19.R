@@ -22,7 +22,7 @@ df <- V4_T2.36
 View(df)
 
 # Load county-specific data from Table 2.36
-cty_df <- df %>% filter(AdminArea == "County")
+cty_df <- df |> filter(AdminArea == "County")
 view(cty_df)
 
 # Set an appropriate theme
